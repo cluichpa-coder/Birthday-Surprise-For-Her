@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff8f5">
+    <title>Luichpa &amp; Suraj</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="birthday-journey" class="birthday-journey">
+        <section class="birthday-page welcome-page" data-step="0" aria-labelledby="welcome-title">
+            <div class="journey-card">
+                <p class="eyebrow">A tiny surprise, made with love</p>
+                <span class="welcome-flower" aria-hidden="true">🌸</span>
+                <h1 id="welcome-title">A little birthday magic</h1>
+                <p class="journey-copy">There are five balloons waiting just for you. Pop every one to see what’s next!</p>
+                <div class="balloon-row" id="welcome-balloons" aria-label="Five balloons to pop">
+                    <button class="balloon-button balloon-pink" type="button" aria-label="Pop balloon 1"><span class="balloon-mark" aria-hidden="true">♥</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-peach" type="button" aria-label="Pop balloon 2"><span class="balloon-mark" aria-hidden="true">✿</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-lilac" type="button" aria-label="Pop balloon 3"><span class="balloon-mark" aria-hidden="true">♥</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-rose" type="button" aria-label="Pop balloon 4"><span class="balloon-mark" aria-hidden="true">✧</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-yellow" type="button" aria-label="Pop balloon 5"><span class="balloon-mark" aria-hidden="true">♥</span><span class="balloon-string" aria-hidden="true"></span></button>
+                </div>
+                <p id="balloon-progress" class="journey-status" role="status" aria-live="polite">0 of 5 balloons popped</p>
+            </div>
+            <div class="floating-heart heart-one" aria-hidden="true">♥</div>
+            <div class="floating-heart heart-two" aria-hidden="true">✧</div>
+        </section>
+
+        <section class="birthday-page quiz-page" data-step="1" aria-labelledby="quiz-title" hidden>
+            <div class="journey-card quiz-card">
+                <p class="eyebrow">Just two little questions</p>
+                <span class="welcome-flower" aria-hidden="true">💌</span>
+                <h1 id="quiz-title">How well do you know your birthday boy?</h1>
+                <p class="journey-copy">Answer both questions to unlock your birthday surprise.</p>
+                <form id="quiz-form">
+                    <label class="quiz-label" for="boyfriend-answer">Who is your BoyFreind?</label>
+                    <input id="boyfriend-answer" name="boyfriend" type="text" autocomplete="off" placeholder="Type your answer..." required>
+                    <label class="quiz-label" for="class-answer">What class your BoyFreind in</label>
+                    <input id="class-answer" name="class" type="text" inputmode="numeric" autocomplete="off" placeholder="Type your answer..." required>
+                    <p id="quiz-feedback" class="journey-status" role="status" aria-live="polite"></p>
+                    <button class="surprise-button" type="submit">Unlock my surprise <span aria-hidden="true">♡</span></button>
+                </form>
+                <button class="text-button" type="button" data-go-to="0">Back to the balloons</button>
+            </div>
+            <div class="floating-heart heart-one" aria-hidden="true">♥</div>
+            <div class="floating-heart heart-two" aria-hidden="true">✧</div>
+        </section>
+
+        <section class="birthday-page celebration-page" data-step="2" aria-labelledby="birthday-title" hidden>
+            <div class="party-lights" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="journey-card celebration-card">
+                <p class="eyebrow">The birthday girl deserves all the love</p>
+                <span class="welcome-flower celebration-flower" aria-hidden="true">🎂</span>
+                <h1 id="birthday-title">Happy Birthday, Cutie!</h1>
+                <p class="journey-copy">Pop these three balloons for a few little birthday wishes.</p>
+                <div class="balloon-row celebration-balloons" id="birthday-balloons" aria-label="Three birthday surprise balloons">
+                    <button class="balloon-button balloon-pink" type="button" data-surprise="You make every day a little more beautiful."><span class="balloon-mark" aria-hidden="true">♥</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-peach" type="button" data-surprise="Sending you the biggest hug from miles away!"><span class="balloon-mark" aria-hidden="true">✿</span><span class="balloon-string" aria-hidden="true"></span></button>
+                    <button class="balloon-button balloon-lilac" type="button" data-surprise="Today is all about celebrating wonderful you."><span class="balloon-mark" aria-hidden="true">♥</span><span class="balloon-string" aria-hidden="true"></span></button>
+                </div>
+                <p id="birthday-surprise" class="surprise-message" role="status" aria-live="polite">Tap a balloon to reveal a little wish.</p>
+                <button id="open-letter" class="surprise-button" type="button" hidden>Open your birthday letter <span aria-hidden="true">♡</span></button>
+                <button class="text-button" type="button" data-go-to="1">Back to the questions</button>
+            </div>
+            <div class="floating-heart heart-one" aria-hidden="true">♥</div>
+            <div class="floating-heart heart-two" aria-hidden="true">✧</div>
+        </section>
+
+        <section class="birthday-page letter-page" data-step="3" aria-labelledby="letter-title" hidden>
+            <article class="letter-card">
+                <p class="eyebrow">A birthday letter, from my heart to yours</p>
+                <span class="welcome-flower" aria-hidden="true">💗</span>
+                <h1 id="letter-title">To My Favourite Person,<br>My Forever Love 💗🌸</h1>
+                <div class="letter-copy">
+                    <p>Happy Birthday to the girl who makes my ordinary days feel special, even from miles away. ❤️ I wish I could be there beside you today, see your beautiful smile, hold your hand, and celebrate every little moment with you. But even though distance keeps us apart, it can never change how much you mean to me. You are someone I wish to share my happiest moments, silly jokes, random conversations, and even my quietest days with.</p>
+                    <p>I don't know what the future has planned for us, but I hope it brings us closer, gives us countless memories, and one day lets me celebrate your birthday right beside you instead of through a screen. Until that day comes, remember that somewhere, miles away, there's a person who is genuinely happy that you were born. Keep smiling, keep shining, and never forget how special you are. Happy Birthday, my favourite human. I love you more than these little words can explain. 🥹💗🌸</p>
+                </div>
+                <p class="final-caption">“Distance is just a number, but you will always have a special place in my heart. Happy Birthday, my girl. ❤️”</p>
+                <button id="explore-memories" class="surprise-button" type="button">Explore our memories <span aria-hidden="true">♡</span></button>
+            </article>
+        </section>
+    </div>
+
+    <header id="our-story" class="hero" hidden>
+        <p class="eyebrow">A little love note, just for us</p>
+        <h1>Our story, written in the stars</h1>
+        <div class="sub">Luichpa <span aria-hidden="true">&hearts;</span> Suraj</div>
+        <p class="hero-note">To my favorite person, in every season and every lifetime.</p>
+    </header>
+
+    <main id="memories-site" hidden>
+        <section class="top-grid" aria-label="Our special dates">
+            <article class="card">
+                <div class="small">The day my favorite girl was born</div>
+                <div id="birthday-count" class="countdown">-</div>
+                <div class="small">Next occurrence: <span id="birthday-next">-</span></div>
+            </article>
+
+            <article class="card">
+                <div class="small">Our next little celebration</div>
+                <div id="anniversary-count" class="countdown">-</div>
+                <div class="small">Next occurrence: <span id="anniversary-next">-</span></div>
+            </article>
+
+            <article class="card">
+                <div class="small">The day your favorite boy was born</div>
+                <div id="mybirthday-count" class="countdown">-</div>
+                <div class="small">Next occurrence: <span id="mybirthday-next">-</span></div>
+            </article>
+
+            <article class="card together">
+                <div class="small">Every day, a little more us</div>
+                <div id="together-days" class="big">0 days</div>
+                <div id="together-seconds" class="small accent">0 seconds</div>
+            </article>
+        </section>
+
+        <section class="memories" aria-labelledby="memories-title">
+            <div class="section-heading">
+                <p class="eyebrow">Little snapshots, forever memories</p>
+                <h2 id="memories-title">Our favorite moments</h2>
+                <p>Add your photos, then move them around to make this little corner yours.</p>
+            </div>
+            <div class="gallery-toolbar">
+                <label class="add-photos" for="photo-picker">Add our photos <span aria-hidden="true">+</span></label>
+                <input id="photo-picker" class="visually-hidden" type="file" accept="image/*" multiple>
+                <span class="gallery-hint">Drag photos to rearrange them</span>
+            </div>
+            <div id="photo-stage" class="photo-stage" aria-label="Moveable photo memories">
+                <div id="gallery-empty" class="gallery-empty">
+                    <span class="empty-heart" aria-hidden="true">&hearts;</span>
+                    <p>Our story looks lovely from here.</p>
+                    <span>Choose a few photos to fill this space with us.</span>
+                </div>
+            </div>
+            <p id="gallery-status" class="gallery-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="love-note">
+            <p class="eyebrow">Always and in all ways</p>
+            <h2>My favorite place is with you</h2>
+            <p>Every ordinary day turns into something beautiful when I get to share it with you.</p>
+            <p>Thank you for being my safe place, my biggest smile, and the love I will choose in every lifetime. I love you more than all the words I could ever write.</p>
+            <div class="love-signoff">All my love, always <span aria-hidden="true">&hearts;</span></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
